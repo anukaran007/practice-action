@@ -1,12 +1,12 @@
-name: main workflow
+name: Main Workflow
 
 on:
- push:
-  branches: ["main"]
+  push:
+    branches: ["main"]
 
 jobs:
   caller-reusable:
-   uses: ./.github/workflows/original-workflow.yaml
+    uses: ./.github/workflows/original-workflow.yaml
 
   call-reusable_from_another_repo:
-   uses: anukaran007/reusablerepo/another_repo_workflow.yaml@main
+    uses: anukaran007/reusablerepo/.github/workflows/another_repo_workflow.yaml@main
