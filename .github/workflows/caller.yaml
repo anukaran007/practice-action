@@ -1,11 +1,15 @@
-name: Shared Workflow
+name: main workflow
+
 
 on:
-  workflow_call:
+ push:
+  branches: ["main"]
 
 jobs:
-  workflow_another_repo:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Run from other repo
-        run: echo "Hit hard till you get success"
+  caller-reusable:
+   uses: ./.github/workflows/original_workflow.yaml
+
+
+  call-reusable_from_another_repo:
+    uses: anukaran007/reusablerepo/.github/workflows/another_repo_workflow.yaml@main
+  
