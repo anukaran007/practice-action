@@ -6,4 +6,4 @@ on:
 
 jobs:
   caller-reusable:
-   uses: ./.github
+   uses: ./.github/workflows/original-workflow.yaml
