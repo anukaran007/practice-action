@@ -11,5 +11,5 @@ jobs:
 
 
   call-reusable_from_another_repo:
-   uses: anukaran007/reusablerepo/.github/workflows/another_repo_workflow.yaml@main
+   uses: anukaran007/reusablerepo/.github/workflows/another_repo_workflow.yaml@features
   
